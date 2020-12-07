@@ -36,7 +36,7 @@ STEP 6:
 
 import React, { useState } from 'react'; /* STEP 0 */
 
-export default function Input(props) {
+export default function Input() {
   /* STEP 1 */
   const [inputValue, setInputValue] = useState("")
   const changeInput = evt => {
@@ -53,13 +53,14 @@ export default function Input(props) {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: inputValue > 10 ? 'crimson' : 'royalblue' 
+    /*'royalblue',*/ /* STEP 2 */
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}></div> {/* STEP 3 */}
+  <div id='output' style={style}>{(inputValue).toUpperCase}</div> {/* STEP 3 */}
       <div>
         <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
         <button id='resetInput' onClick={reset}>Reset</button>
