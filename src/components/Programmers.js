@@ -36,8 +36,12 @@ export default function Programmers() {
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
+    //Uses both programList and (programID)
+    return programID
   };
-
+console.log('programList', programList)
+console.log('programID', programID)
+console.log('programJangel', programList[programID])
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
