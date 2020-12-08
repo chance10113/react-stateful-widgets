@@ -39,9 +39,7 @@ export default function Programmers() {
     //Uses both programList and (programID)
     return programID
   };
-console.log('programList', programList)
-console.log('programID', programID)
-console.log('programJangel', programList[programID])
+
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
